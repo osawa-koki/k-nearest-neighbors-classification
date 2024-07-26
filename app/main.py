@@ -1,8 +1,8 @@
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn import datasets
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 
 # Irisデータセットをロード
 iris = datasets.load_iris()
@@ -25,9 +25,9 @@ y_pred = knn.predict(X_test)
 
 # モデルの精度を評価
 accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy:.2f}')
+print(f"Accuracy: {accuracy:.2f}")
 
 # サンプルデータの予測
 sample_data = np.array([[5.0, 3.6, 1.4, 0.2]])
 predicted_class = knn.predict(sample_data)
-print(f'Predicted class: {predicted_class[0]}')
+print(f"Predicted class: {predicted_class[0]}")
